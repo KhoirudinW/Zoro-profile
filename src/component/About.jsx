@@ -110,7 +110,7 @@ function About() {
                         style={{ scrollSnapAlign: "center" }}
                     >
                         <img
-                            src={`/Zoro-profile/img/img-${index}.png`}
+                            src={`img/img-${index}.png`}
                             alt={`image-${index}`}
                             className="w-full h-full object-cover"
                         />

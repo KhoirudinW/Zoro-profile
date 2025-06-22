@@ -64,11 +64,11 @@ const Bento = () => {
   };
 
   const videoSources = [
-    "/Zoro-profile/videos/bento-1.mp4",
-    "/Zoro-profile/videos/bento-2.mp4",
-    "/Zoro-profile/videos/bento-3.mp4",
-    "/Zoro-profile/videos/bento-4.mp4",
-    "/Zoro-profile/videos/bento-5.mp4",
+    "../videos/bento-1.mp4",
+    "../videos/bento-2.mp4",
+    "../videos/bento-3.mp4",
+    "../videos/bento-4.mp4",
+    "../videos/bento-5.mp4",
   ];
 
   const gridClasses = [
