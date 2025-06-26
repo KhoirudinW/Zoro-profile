@@ -14,6 +14,7 @@ const BentoItems = forwardRef(({ src, title, desc }, ref) => {
       <video
         ref={ref}
         src={src}
+        preload="auto"
         className="w-full h-full object-cover brightness-50 md:brightness-40 lg:group-hover:brightness-95 transition-all duration-300 ease-in-out"
         muted
       />

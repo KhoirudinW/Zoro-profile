@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import Button from "./Button";
 import {TiLocationArrow} from "react-icons/ti"
 import { useGSAP } from "@gsap/react";
@@ -92,7 +92,10 @@ function Hero() {
         // });
     })
 
-    const getVDSrc = (index) => `videos/hero-${index}.mp4`;
+    const Video = [ "videos/hero-1.mp4", "videos/hero-2.mp4", "videos/hero-3.mp4", "videos/hero-4.mp4",];
+
+    // const getVDSrc = useCallback((index) => `videos/hero-${index}.mp4`, []);
+    const getVDSrc = useCallback((index) => Video[index], []);
 
     return (
         <section className="relative h-dvh w-screen overflow-x-hidden" id="home">
@@ -113,6 +116,7 @@ function Hero() {
                                 src={getVDSrc(upcomingVd)}
                                 loop
                                 muted
+                                preload="metadata"
                                 id="current-video"
                                 className="size-64 origin-center scale-150 object-cover object-center"
                                 onLoadedData={handleVDload}
@@ -124,6 +128,7 @@ function Hero() {
                         src={getVDSrc(currIndex)}
                         loop
                         muted
+                        preload="auto"
                         id="next-video"
                         className="absolute-center invisible absolute z-20 size-64 object-cover object-center"
                         onLoadedData={handleVDload}
@@ -136,6 +141,7 @@ function Hero() {
                         autoPlay
                         loop
                         muted
+                        preload="auto"
                         className="absolute-center left-0 top-0 size-full object-cover object-center"
                         onLoadedData={handleVDload}
                     ></video>
