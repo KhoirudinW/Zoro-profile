@@ -95,11 +95,11 @@ const Bento = () => {
   };
 
   const videoSources = [
-    "../videos/bento-1.mp4",
-    "../videos/bento-2.mp4",
-    "../videos/bento-3.mp4",
-    "../videos/bento-4.mp4",
-    "../videos/bento-5.mp4",
+    "../videos/bento-1(1).mp4",
+    "../videos/bento-2(1).mp4",
+    "../videos/bento-3(1).mp4",
+    "../videos/bento-4(1).mp4",
+    "../videos/bento-5(1).mp4",
   ];
 
   const gridClasses = [

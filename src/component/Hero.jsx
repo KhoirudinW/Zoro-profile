@@ -92,7 +92,7 @@ function Hero() {
         // });
     })
 
-    const Video = [ "videos/hero-1.mp4", "videos/hero-2.mp4", "videos/hero-3.mp4", "videos/hero-4.mp4",];
+    const Video = [ "videos/hero-1(1).mp4", "videos/hero-2(1).mp4", "videos/hero-3(1).mp4", "videos/hero-4(1).mp4",];
 
     // const getVDSrc = useCallback((index) => `videos/hero-${index}.mp4`, []);
     const getVDSrc = useCallback((index) => Video[index], []);
