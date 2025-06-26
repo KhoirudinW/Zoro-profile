@@ -87,11 +87,23 @@ html, body {
     right: 0;
   }
   .menu_active{
-    top: -300px;
-    right: -300px;
-    width: 500px;
-    height: 500px;
-    z-index: -1;
+    @media (width >= 40rem /* 640px */) {
+      top: -300px;
+      right: -300px;
+      width: 500px;
+      height: 500px;
+      z-index: -1;
+    }
+  }
+
+  .android_active{
+    @media (width <= 633px /* 640px */) {
+      top: -20px;
+      right: -20px;
+      width: 200px;
+      height: 100dvh;
+      z-index: -1;
+    }
   }
 
   .circular-menu-container {

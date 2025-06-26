@@ -66,7 +66,7 @@ function About() {
         <section
             id="about"
             ref={sectionRef}
-            className="relative w-full min-h-screen overflow-hidden bg-[#375949] text-zlgreen select-none"
+            className="relative w-dvw min-h-dvh overflow-hidden bg-[#375949] text-zlgreen select-none"
         >
             
             {/* SCROLL LABELS */}
@@ -75,7 +75,7 @@ function About() {
             </div>
             
            
-            <div className={`absolute bottom-10 left-1/2 -translate-x-1/2 text-white font-oswald text-lg z-10 md:hidden opacity-0 transition-all animate-bounce duration-500 ease-in ${ activeIndex === totalPanels - 3 ? "opacity-100" : ""}`}>
+            <div className={`absolute bottom-10 left-1/2 -translate-x-1/2 text-white font-oswald text-lg z-10 md:hidden opacity-0 transition-all animate-bounce duration-500 ease-in ${ activeIndex === totalPanels - 1 ? "opacity-100" : ""}`}>
             ↓ Scroll Down
             </div>
             
@@ -100,7 +100,7 @@ function About() {
                 </div>
                 
             
-                <div className={`absolute hidden md:block lg:top-1/2 lg:right-30 right-20 top-1/2 -translate-y-1/2 text-white font-oswald text-lg z-[100] delay-500 opacity-0 transition-all animate-bounce duration-500 ease-in ${ activeIndex === totalPanels - 1 ? "opacity-100" : ""}`}>
+                <div className={`absolute hidden md:block lg:top-1/2 lg:right-30 right-20 top-1/2 -translate-y-1/2 text-white font-oswald text-lg z-[100] delay-500 opacity-0 transition-all animate-bounce duration-500 ease-in ${ activeIndex === totalPanels - 1  ? "opacity-100" : ""}`}>
                 ↓ Scroll Down
                 </div>
 
@@ -131,7 +131,7 @@ function About() {
                 ))}
             </div>
                 <div
-                    className={`absolute lg:hidden h-[290px] w-[90%] border bottom-25 left-1/2 -translate-x-1/2  bg-black bg-opacity-60  flex items-center justify-center text-white font-oswald text-center text-xl px-4 transition-opacity duration-500`}
+                    className={`absolute lg:hidden h-[200px] border-2  rounded-2xl w-[90%] bottom-25 left-1/2 -translate-x-1/2  bg-zlgreen bg-opacity-[60%]  flex items-center justify-center text-black font-oswald text-center text-xl px-4 transition-opacity duration-500`}
                 >
                     <p>{desc[activeIndex]}</p>
                 </div>

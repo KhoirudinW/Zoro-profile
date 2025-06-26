@@ -69,7 +69,7 @@ const Mainmenu = () => {
         className="fixed top-5 right-5 flip-container size-16 z-[1000]"
     >
          {/* Circular Text SVG */}
-    <div >
+    <div className='hidden sm:block'>
 
       <svg
         ref={svgRef}
@@ -101,9 +101,11 @@ const Mainmenu = () => {
         </text>
       </svg>
     </div>
+    <div className="relative">
+      <div className={`bg-white opacity-90 absolute transition-all duration-300 ease-in z-[-1] logo ${flipped ? '' : 'hide'} ${active ? 'android_active' : ''}` }></div>
       <button
         onClick={toggleClick}
-        className={`bg-zlgreen absolute size-15 rounded-full flex justify-center items-center menu cursor-pointer
+        className={`sm:bg-zlgreen absolute size-15 sm:rounded-full flex justify-center items-center menu cursor-pointer
                     flip-inner ${flipped ? 'flip-rotate' : ''} ${active ? 'menu_active' : ''}`}
       >
         <img
@@ -113,9 +115,16 @@ const Mainmenu = () => {
           className={`logo ${flipped ? 'hide' : ''}`}
         />
       </button>
+        <div className="absolute block sm:hidden top-0 right-[0]">
+              <ul className={`${flipped ? 'flex' : 'hidden'} transition-all delay-150 duration-300 gap-20 ease-in flex-col justify-center items-center ${active ? 'android_active opacity-100' : 'opacity-0'} font-bebas text-6xl`}>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+              </ul>
+        </div>
       <button 
         onClick={toggleClick} 
-        className={`absolute top-1/2 left-1/2 z-[150] size-15 -translate-x-1/2 -translate-y-1/2  cursor-pointer
+        className={`absolute  z-[150] size-15  cursor-pointer
                     flex items-center justify-center 
                     ${flipped ? '' : 'pointer-events-none opacity-0'}`}
         >
@@ -126,6 +135,7 @@ const Mainmenu = () => {
                 className="pointer-events-none"
             />
         </button>
+    </div>
     </div>
   );
 };
