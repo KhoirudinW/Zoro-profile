@@ -1,6 +1,7 @@
 import Hero from "./component/Hero";
 import About from "./component/About";
 import Bento from "./component/Bento";
+import Mainmenu from "./component/Mainmenu";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Hero />
       <About/>
       <Bento />
+      <Mainmenu />
     </main>
   )
 }

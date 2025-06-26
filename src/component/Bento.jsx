@@ -1,4 +1,8 @@
-import { useState, useRef, forwardRef } from "react";
+import { useState, useLayoutEffect, useRef, forwardRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const BentoItems = forwardRef(({ src, title, desc }, ref) => {
   return (
@@ -22,6 +26,32 @@ const Bento = () => {
   const itemsRefs = useRef([]);
   const [transformStyles, setTransformStyles] = useState({});
   const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  useLayoutEffect(() => {
+    itemsRefs.current.forEach((el, index) => {
+      if (!el) return;
+  
+      // Animate from left (even index) or right (odd index)
+      const direction = index % 2 === 0 ? -100 : 100;
+  
+      gsap.fromTo(
+        el,
+        { x: direction, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+            end: "top 100%",
+            scrub: true,
+          },
+        }
+      );
+    });
+  }, []);
 
   const handleMouseEnter = (index) => {
     const video = videoRefs.current[index];
@@ -72,27 +102,27 @@ const Bento = () => {
   ];
 
   const gridClasses = [
-    "md:row-span-2 md:col-span-2",
-    "md:row-span-2 md:col-span-4",
-    "md:row-span-2 md:col-span-4",
-    "md:row-span-1 md:col-span-2",
-    "md:row-span-1 md:col-span-2",
+    "md:row-span-2 md:col-span-2 opacity-0",
+    "md:row-span-2 md:col-span-4 opacity-0",
+    "md:row-span-2 md:col-span-4 opacity-0",
+    "md:row-span-1 md:col-span-2 opacity-0",
+    "md:row-span-1 md:col-span-2 opacity-0",
   ];
 
   const skills = [
-    { title: "Title 1", desc: "Lorem ipsum dolor sit amet consectetur." },
-    { title: "Title 2", desc: "Lorem ipsum dolor sit amet consectetur." },
-    { title: "Title 3", desc: "Lorem ipsum dolor sit amet consectetur." },
-    { title: "Title 4", desc: "Lorem ipsum dolor sit amet consectetur." },
-    { title: "Title 5", desc: "Lorem ipsum dolor sit amet consectetur." },
+    { title: "Kesetiaan", desc: "Lorem ipsum dolor sit amet consectetur." },
+    { title: "Tekat yang kuat", desc: "Lorem ipsum dolor sit amet consectetur." },
+    { title: "Kegigihan", desc: "Lorem ipsum dolor sit amet consectetur." },
+    { title: "Keberanian", desc: "Lorem ipsum dolor sit amet consectetur." },
+    { title: "Kepercayaan", desc: "Lorem ipsum dolor sit amet consectetur." },
   ];
 
   return (
-    <section className="min-h-screen w-screen flex flex-col gap-5 justify-center items-center">
+    <section id="skills" className="min-h-screen w-screen flex flex-col gap-5 justify-center items-center">
       <header className="heading">
-        <h1>Halo</h1>
+        <h1 className="font-bebas text-5xl text-zdgreen">Skills</h1>
       </header>
-      <div className="grid grid-rows-5 grid-cols-1 md:grid-rows-4 w-[90vw] h-[90vh] md:w-[80vw] md:h-[80vh] xl:w-[65vw] xl:h-[70vh] md:grid-cols-6 gap-3">
+      <div id="trigger" className="grid grid-rows-5 grid-cols-1 md:grid-rows-4 w-[90vw] h-[90vh] md:w-[80vw] md:h-[80vh] xl:w-[65vw] xl:h-[70vh] md:grid-cols-6 gap-3">
         {videoSources.map((src, index) => (
           <div
             key={index}

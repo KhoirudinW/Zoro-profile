@@ -8,6 +8,9 @@ body {
   background-color: #dfdff0;
 }
 
+html, body {
+  scroll-behavior: smooth !important;
+}
 @font-face {
     font-family: Bebas;
     src: url('../public/font/BebasNeue-Regular.ttf');
@@ -55,7 +58,75 @@ body {
   /* .mask-clip-path {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   } */
+  .flip-container {
+    perspective: 1000px;
+  }
+  
+  .flip-inner {
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-rotate {
+    transform: rotateY(180deg);
+  }
+  
+  .logo {
+    transition: opacity 0.4s ease;
+    backface-visibility: hidden;
+  }
+  
+  .logo.hide {
+    opacity: 0;
+    transform: rotateY(0deg);
+  }
+  
+  .menu {
+    transition: all 0.4s ease;
+    top: 0;
+    right: 0;
+  }
+  .menu_active{
+    top: -300px;
+    right: -300px;
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+  }
 
+  .circular-menu-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+  
+  .circular-menu-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .circular-menu-svg {
+    position: absolute;
+    top: -300px;
+    right: -300px;
+    /* top: 0px;
+    right: 0px; */
+    transform-origin: center;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .list_menu_inactive{
+    display: hidden;
+    z-index: 0;
+  }
+
+  .list_menu_active{
+    display: block;
+    z-index: 100;
+  }
+  
 
   .hero-heading {
     @apply uppercase font-bebas font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[8rem];

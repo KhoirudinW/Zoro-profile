@@ -64,6 +64,7 @@ function About() {
 
     return (
         <section
+            id="about"
             ref={sectionRef}
             className="relative w-full min-h-screen overflow-hidden bg-[#375949] text-zlgreen select-none"
         >

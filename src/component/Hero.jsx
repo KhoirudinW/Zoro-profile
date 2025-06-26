@@ -95,7 +95,7 @@ function Hero() {
     const getVDSrc = (index) => `videos/hero-${index}.mp4`;
 
     return (
-        <div className="relative h-dvh w-screen overflow-x-hidden">
+        <section className="relative h-dvh w-screen overflow-x-hidden" id="home">
             {isloading && <div className="absolute-center absolute z-30 flex-center text-black text-3xl">Loading...</div>}
 
             <div
@@ -156,7 +156,7 @@ function Hero() {
             <h1 className="hero-heading absolute bottom-5 right-5 text-black bg-blend-color p-2 rounded-md">
                     Swordman
             </h1>
-        </div>
+        </section>
     );
 }
 
