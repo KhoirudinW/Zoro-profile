@@ -30,9 +30,10 @@ Proyek ini dibuat sebagai sarana belajar:
 
 ## 📸 Cuplikan Tampilan
 
+![contoh 2](https://github.com/user-attachments/assets/8d03a356-c9bc-47f9-b27e-ed2cf1c489a2)
+
 ![zoroProfile](https://github.com/user-attachments/assets/e30e2fcb-7631-4744-99ca-56ea875655d4)
 
-(Tambahkan screenshot di sini, atau link ke demo)
 
 ---
 
