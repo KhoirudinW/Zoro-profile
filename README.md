@@ -2,6 +2,15 @@
 
 **Zoro Profile** adalah website profil modern untuk karakter **Roronoa Zoro** dari anime *One Piece*, dibuat sebagai proyek latihan untuk memperdalam pemahaman saya dalam frontend development, khususnya dalam menggabungkan **React**, **GSAP**, dan **Tailwind CSS**.
 
+---
+
+## 📸 Cuplikan Tampilan
+
+![contoh 2](https://github.com/user-attachments/assets/8d03a356-c9bc-47f9-b27e-ed2cf1c489a2)
+
+![zoroProfile](https://github.com/user-attachments/assets/e30e2fcb-7631-4744-99ca-56ea875655d4)
+
+
 ## ✨ Fitur Utama
 
 - 🎨 Desain modern & responsif
@@ -25,15 +34,6 @@ Proyek ini dibuat sebagai sarana belajar:
 - Mengintegrasikan animasi dengan GSAP di dalam aplikasi React
 - Membangun UI responsif dan bersih menggunakan Tailwind CSS
 - Mengatur struktur proyek dan komponen yang rapi dan scalable
-
----
-
-## 📸 Cuplikan Tampilan
-
-![contoh 2](https://github.com/user-attachments/assets/8d03a356-c9bc-47f9-b27e-ed2cf1c489a2)
-
-![zoroProfile](https://github.com/user-attachments/assets/e30e2fcb-7631-4744-99ca-56ea875655d4)
-
 
 ---
 
