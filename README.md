@@ -6,7 +6,7 @@
 
 ## 🧠 Inspiration & References
 
-The design of the **hero section** was inspired by the clean, modern look of the [Zentry website](https://zentry.com). Development was guided by this helpful [YouTube tutorial](https://youtu.be/zA9r5zTllx4?si=qEDfVdBJIWE5pFMA), which provided insights on integrating **GSAP** animations within a React environment.
+The design of the **hero section** was inspired by the clean, modern look of the [Zentry website](https://zentry.com). Development was guided by this helpful [Build and Deploy an Awwwards Winning Website | React.js, Tailwind CSS, GSAP](https://youtu.be/zA9r5zTllx4?si=qEDfVdBJIWE5pFMA), which provided insights on integrating **GSAP** animations within a React environment.
 
 ---
 
