@@ -24,7 +24,6 @@ The design of the **hero section** was inspired by the clean, modern look of the
 - 🎨 Modern & responsive UI design
 - ⚡ Smooth interactive animations powered by **GSAP**
 - 💨 Utility-first styling using **Tailwind CSS**
-- ♻️ Reusable component structure with **React**
 
 ---
 
