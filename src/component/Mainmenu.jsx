@@ -61,9 +61,7 @@ const Mainmenu = () => {
 
     const listInActive = {display: 'none', zIndex: 0};
     const listActive = {display: 'block', zIndex: 150};
-
     
-
   return (
     <div 
         className="fixed top-5 right-5 flip-container size-16 z-[1000]"

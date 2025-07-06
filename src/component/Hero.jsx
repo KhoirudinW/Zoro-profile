@@ -74,22 +74,6 @@ function Hero() {
                 scrub: true
             },
         });
-        // gsap.set('#video-frame', {
-        //     transform: 'perspective(500px) rotateX(10deg) rotateY(10deg) scale3d(0.9, 0.9, 0.9)',
-        //     // borderRadius: '0 0 40% 10px',
-        // });
-
-        // gsap.from('#video-frame', {
-        //     transform: 'perspective(500px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)',
-        //     borderRadius: '0 0 0 0',
-        //     ease: 'power1.inOut',
-        //     scrollTrigger:{
-        //         trigger: '#video-frame',
-        //         start: 'center center',
-        //         end: 'bottom center',
-        //         scrub: true
-        //     },
-        // });
     })
 
     const Video = [ "videos/hero-1(1).mp4", "videos/hero-2(1).mp4", "videos/hero-3(1).mp4", "videos/hero-4(1).mp4",];
